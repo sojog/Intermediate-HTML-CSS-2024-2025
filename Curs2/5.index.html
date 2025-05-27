@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #tarc {
+        background-color: rgba(172, 255, 47, 0.304);
+        aspect-ratio: 1/1;
+        width: min(80vh, 80vw);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .oaie {
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <select name="align-items" id="" onchange="change_align_items()">
+      <option value="flex-end">flex-end</option>
+      <option value="center">center</option>
+      <option value="flex-start">flex-start</option>
+    </select>
+    <select name="justify-content" id="" onchange="change_justify_content()">
+      <option value="flex-end">flex-end</option>
+      <option value="center">center</option>
+      <option value="flex-start">flex-start</option>
+
+      <option value="space-evenly">space-evenly</option>
+      <option value="space-between">space-between</option>
+      <option value="space-around">space-around</option>
+    </select>
+
+    <div id="tarc">
+      <div class="oaie">🐑</div>
+    </div>
+    <button onclick="adauga_oaie()">Adauga oaie</button>
+
+    <script>
+      /* tarc este referinta catre div-ul cu id-ul tarc */
+      var tarc = document.getElementById("tarc");
+       /* align_items_select este referinta catre div-ul cu numele  align-items */
+      var align_items_select = document.getElementsByName("align-items")[0];
+
+      function change_align_items() {
+        tarc.style.alignItems = align_items_select.value;
+      }
+      var justy_content_select =
+        document.getElementsByName("justify-content")[0];
+      function change_justify_content() {
+        tarc.style.justifyContent = justy_content_select.value;
+      }
+
+      function adauga_oaie() {
+        var oaie_noua = document.createElement("div");
+        oaie_noua.className = "oaie";
+        oaie_noua.innerHTML = "🐑";
+        tarc.appendChild(oaie_noua);
+      }
+      setInterval(adauga_oaie, 10000)
+    </script>
+  </body>
+</html>

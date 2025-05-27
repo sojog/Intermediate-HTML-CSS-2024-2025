@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #steag {
+        width: 40vw;
+        aspect-ratio: 3/2;
+        background-color: white;
+        border: black solid 2px;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .cadran {
+        width: 50%;
+        height: 50%;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+
+      }
+      
+      .cadran:nth-child(1), .cadran:nth-child(2){
+        border-bottom: solid red 20px;
+      }
+
+      .cadran:nth-child(3), .cadran:nth-child(4){
+        border-top: solid red 20px;
+      }
+
+      .cadran:nth-child(1), .cadran:nth-child(3){
+        border-right: solid red 20px;
+      }
+      .cadran:nth-child(2), .cadran:nth-child(4){
+        border-left: solid red 20px;
+      }
+      .cruce {
+        aspect-ratio: 1/1;
+        width: 30%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .orizontal {
+        width: 35%;
+        height: 30%;
+        background-color: red;
+    }
+    .vertical {
+        width: 30%;
+        height: 100%;
+        background-color: red;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="steag">
+            <div class="cadran">
+                    <div class="cruce">
+                        <div class="orizontal"></div>
+                        <div class="vertical"></div>
+                        <div class="orizontal"></div>
+                    </div>
+            </div>
+            <div class="cadran">
+                <div class="cruce">
+                    <div class="orizontal"></div>
+                    <div class="vertical"></div>
+                    <div class="orizontal"></div>
+                </div>
+            </div>
+            <div class="cadran">
+                <div class="cruce">
+                    <div class="orizontal"></div>
+                    <div class="vertical"></div>
+                    <div class="orizontal"></div>
+                </div>
+            </div>
+            <div class="cadran">
+                <div class="cruce">
+                    <div class="orizontal"></div>
+                    <div class="vertical"></div>
+                    <div class="orizontal"></div>
+                </div>
+            </div>
+    </div>
+  </body>
+</html>

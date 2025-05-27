@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      div:not(#sabie) {
+        aspect-ratio: 1/1;
+        width: calc(100% - 15vw);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .rosu {
+        background-color: red;
+      }
+      .negru {
+        background-color: black;
+      }
+      #sabie {
+        background-color: transparent;
+        font-size: 15vw;
+        position: absolute;
+        right: 0;
+        top: 0px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rosu">
+      <div class="negru">
+        <div class="rosu">
+          <div class="negru">
+            <div class="rosu">
+              <div id="sabie">🗡️</div>
+              <div class="negru"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

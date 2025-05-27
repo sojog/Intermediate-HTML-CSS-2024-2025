@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        max-width: 700px;
+        margin: auto;
+      }
+      #topul,
+      #bottomul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        list-style-type: none;
+        text-decoration: none;
+      }
+      #topul li,
+      #bottomul li {
+        padding-left: 20px;
+      }
+      #topul a {
+        text-decoration: none;
+        color: grey;
+      }
+      #topul a:hover {
+        color: red;
+      }
+      #mijloc {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      #logo {
+        width: 300px;
+        height: 50px;
+        background-image: url("https://www.link-academy.com/images/logo.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      #slogan {
+        padding: 0 30px;
+      }
+      #bottomul {
+        justify-content: flex-start;
+        background-color: red;
+      }
+      #bottomul a {
+        text-decoration: none;
+        color: white;
+      }
+      #bottomul li {
+        color: white;
+        background-color: red;
+        padding: 15px 10px;
+      }
+      #bottomul li:hover {
+        background-color: white;
+      }
+      #bottomul a:hover,
+      #bottomul li:hover a {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul id="topul">
+        <li><a href="">Link Academy</a></li>
+        <li><a href="">Platforma DL</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+
+      <div id="mijloc">
+        <div id="logo"></div>
+        <div id="slogan">
+          Conform autorizării Departamentului de Examinări Internaționale
+          Cambridge și a programelor de certificare IT de top la nivel global
+        </div>
+      </div>
+
+      <ul id="bottomul">
+        <li><a href="">Inscriere</a></li>
+        <li><a href="">Programe</a></li>
+        <li><a href="">Ce obtineti</a></li>
+        <li><a href="">E-learning</a></li>
+        <li><a href="">Diplome</a></li>
+      </ul>
+    </header>
+  </body>
+</html>
