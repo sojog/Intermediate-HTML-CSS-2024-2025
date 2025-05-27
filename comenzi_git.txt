@@ -1,4 +1,27 @@
 
 # comenzi de git -> incepand de la client
-
 git init
+git remote add origin https://link-catre-github.com
+
+
+# navigare
+pwd                           # print working directory
+ls                            # list - listeaza fisierele din folderul curent
+
+
+# pentru a face un commit
+# un COMMIT este o noua varianta 
+git add nume_fisier                     # adaugarea unui fisier in commit
+git commit -m "Aici va fi un mesaj"     # adaugarea unui mesaj pentru commit-ul respectiv
+git push                                # trimitearea commit-ului pe server
+
+
+# comenzi de status
+git --version                            # citeste versiunea de git actuala instalata
+git status                               # verifica statusul fisierelor (daca au fost modificate, adaugate altele noi, sterse)
+git log                                  # istoric al tuturor commit-urilor
+
+
+# comenzi de configurare
+git config --global user.name "Numele vostru"          # Intre ghilimele se seteaza numele user-ului
+git config --global user.email "email@vostru.com"      # Intre ghilimele se seteaza emailul user-ului
