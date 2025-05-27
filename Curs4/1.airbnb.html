@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #topbar,
+      #types,
+      #settings,
+      #searchbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      #topbar {
+        justify-content: space-between;
+      }
+      #logo {
+        background-image: url("logo.svg");
+        background-repeat: no-repeat;
+        height: 1.5rem;
+        aspect-ratio: 3/1;
+      }
+      .type {
+        color: gray;
+      }
+      .type.active {
+        color: black;
+      }
+      #searchbar {
+        border: 2px solid gainsboro;
+        border-radius: 30rem;
+        width: fit-content;
+        margin: 1rem auto;
+      }
+      #searchbutton {
+        aspect-ratio: 1/1;
+        height: 2rem;
+        background-color: #ff385c;
+        border-radius: 50%;
+        padding: 0.1rem;
+      }
+      .searchcategory {
+        padding: 0.2rem 1rem;
+        border-radius: 30rem;
+      }
+      .searchcategory .answer {
+        color: gray;
+      }
+
+      .searchcategory:hover {
+        background-color: lightgrey;
+      }
+      .searchcategory.last {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="topbar">
+        <div id="logo"></div>
+        <div id="types">
+          <div class="type" onclick="schimba_type_class(this)">Homes</div>
+          <div class="type active" onclick="schimba_type_class(this)">
+            Experiences
+          </div>
+        </div>
+        <div id="settings">
+          <div>Airbnb your home</div>
+          <div>O</div>
+          <div>Account</div>
+        </div>
+      </div>
+
+      <div id="searchbar">
+        <div class="searchcategory">
+          <div class="question">Where</div>
+          <div class="answer">Search destinations</div>
+        </div>
+        <div class="searchcategory">
+          <div class="question">Date</div>
+          <div class="answer">Add dates</div>
+        </div>
+        <div class="searchcategory last">
+          <div>
+            <div class="question">Who</div>
+            <div class="answer">Add guests</div>
+          </div>
+
+          <div class="searchcategory" id="searchbutton"></div>
+        </div>
+      </div>
+    </header>
+    <script>
+      schimba_type_class;
+      function schimba_type_class(current_element) {
+        console.log("schimba_type_class");
+        var all_type_divs = document.getElementsByClassName("type");
+        for (let i = 0; i < all_type_divs.length; i++) {
+          const element = all_type_divs[i];
+          element.className = "type";
+        }
+        current_element.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
