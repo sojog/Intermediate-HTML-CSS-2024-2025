@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #animal {
+        transition-duration: 4s;
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="animal">🐑</div>
+    <button onclick="schimba_animalul ()">Schimba</button>
+    <script>
+      var animalul = document.getElementById("animal");
+      function schimba_animalul() {
+        if (animalul.style.fontSize == "3rem") {
+          animalul.style.fontSize = "1rem";
+        } else {
+          animalul.style.fontSize = "3rem";
+        }
+      }
+    </script>
+  </body>
+</html>

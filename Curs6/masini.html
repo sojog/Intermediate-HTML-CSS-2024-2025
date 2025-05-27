@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      #exterior {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aqua;
+        background-image: url("masini/car1.jpeg");
+        background-position: center;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+         transition-duration: 1s;
+      }
+      #exterior::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.425);
+      }
+      #exterior button {
+        z-index: 1;
+        background-color: transparent;
+        border-color: white;
+        color:white;
+      }
+      #masca {
+        background-color: brown;
+        width: 80vw;
+        height: 80vh;
+        overflow: hidden;
+      }
+      #interior {
+        background-image: url("masini/car1.jpeg");
+        background-position: center;
+        background-size: cover;
+
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        left: -10vw;
+        top: -10vh;
+        transition-duration: 1s;
+    }
+    </style>
+  </head>
+  <body>
+        <div id="exterior">
+        <button onclick="schimba_poza(-1)">Prev</button>
+        <div id="masca">
+            <div id="interior"></div>   
+        </div>
+        <button onclick="schimba_poza(1)">Next</button>
+        </div>
+
+    <script>
+        var div_interior = document.getElementById("interior")
+        var div_exterior = document.getElementById("exterior")
+
+        var index = 1
+        function schimba_poza(directie){
+            index = index + directie
+            if (index > 12 ) {
+                index = 1
+            }
+            if (index < 1) {
+                index = 12
+            }
+            div_interior.style.backgroundImage = 'url("masini/car' + index +  '.jpeg")'
+            div_exterior.style.backgroundImage = 'url("masini/car' + index +  '.jpeg")'
+        }
+
+    </script>
+  </body>
+</html>
