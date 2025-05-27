@@ -1,0 +1,4 @@
+
+# comenzi de git -> incepand de la client
+
+git init
