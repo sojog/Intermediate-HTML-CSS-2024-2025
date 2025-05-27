@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      #teren,
+      .echipa,
+      .linie,
+      .jucator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body {
+        height: 100vh;
+        background-color: green;
+      }
+      #teren {
+        width: 80vw;
+        aspect-ratio: 2/1;
+        /* background-color: green; */
+        background-image: url("teren_illustrator.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .echipa {
+        /* background-color: antiquewhite; */
+        width: 50%;
+        height: 100%;
+        justify-content: space-around;
+      }
+      #romania {
+        /* background-color: yellow; */
+      }
+      #argentina {
+        /* background-color: aqua; */
+        /* flex-direction: row-reverse; */
+      }
+      .linie {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        height: 100%;
+        /* background-color: coral; */
+      }
+
+      .jucator {
+        flex-direction: column;
+      }
+      .imaginejucator {
+        background-image: url("https://static.flashscore.com/res/image/data/KlAm9Pef-bZa0VSHL.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        aspect-ratio: 1/1;
+        height: 3rem;
+      }
+      .nume {
+        background-color: white;
+        border-radius: 10px;
+        padding: 0 3px;
+      }
+      .nume span {
+        color: gainsboro;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="teren">
+      <div class="echipa" id="romania">
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+      </div>
+      <div class="echipa" id="argentina">
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+        <div class="linie">
+          <div class="jucator">
+            <div class="imaginejucator"></div>
+            <div class="nume"><span>1.</span>Prunea</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var jucatori = [
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/voLgoZxL-rmkgmAdj.png",
+          nume: "Prunea",
+          numar: 1,
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/dQufh5vL-tO0VC4ft.png",
+          nume: "Prodan",
+          numar: "3",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/ldOUEDbF-t4b3ceKC.png",
+          nume: "Belodedici",
+          numar: "4",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/YDN5wzhs-tO0VC4ft.png",
+          nume: "Mihali",
+          numar: "14",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/fVGnWlEh-QLVEnEhM.png",
+          nume: "Petrescu",
+          numar: "2",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/86dMiiH9-p4XO4hpT.png",
+          nume: "Popescu",
+          numar: "6",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/Iehm0uKQ-pW1i0czf.png",
+          nume: "Lupescu",
+          numar: "5",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/hd9xOuz4-tO0VC4ft.png",
+          nume: "Selymes",
+          numar: "13",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/Wb4gQQxL-4S8nh0Lr.png",
+          nume: "Munteanu",
+          numar: "7",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/AFKDFRIQ-bZa0VSHL.png",
+          nume: "Hagi",
+          numar: "10",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/MPf1KfYn-zFcGU3uP.png",
+          nume: "Dumitrescu",
+          numar: "11",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/2TFZn9I9-Mq967Iyp.png",
+          nume: "Batistuta",
+          numar: "9",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/C80VhIYn-8YnrprwF.png",
+          nume: "Balbo",
+          numar: "19",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/p6bwTjgs-KzNvCbTS.png",
+          nume: "Ortega",
+          numar: "17",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/CjQH9xIQ-KUHt3oft.png",
+          nume: "Simeone",
+          numar: "14",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/hIpBuqFh-hzQWeGDB.png",
+          nume: "Rendondo",
+          numar: "5",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/hYvRQKYn-CC8G90tT.png",
+          nume: "Basualdo",
+          numar: "8",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/WpLGsmgb-Mq967Iyp.png",
+          nume: "Chamot",
+          numar: "3",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/G2r6eigs-GIhw6n63.png",
+          nume: "Ruggeri",
+          numar: "6",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/xzYUPHZ3-E1ObHUlO.png",
+          nume: "Sensini",
+          numar: "4",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/G8VFbwvL-hzQWeGDB.png",
+          nume: "Caceres",
+          numar: "13",
+        },
+        {
+          imagine:
+            "https://static.flashscore.com/res/image/data/jqyBygKQ-MNPCDnRe.png",
+          nume: "Islas",
+          numar: "12",
+        },
+      ];
+      //www.flashscore.ro/res/_fs/build/symbols.a15cd79.svg#soccerFieldView
+
+      https: var div_jucator =
+        document.getElementsByClassName("imaginejucator");
+      for (let i = 0; i < div_jucator.length; i++) {
+        div_jucator[i].style.backgroundImage =
+          'url("' + jucatori[i]["imagine"] + '")';
+      }
+    </script>
+  </body>
+</html>

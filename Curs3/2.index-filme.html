@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        border-color: blue;
+        border-radius: 2px;
+        border-style: solid;
+      }
+      .film {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        height: 10rem;
+        flex-basis: 8rem;
+        flex-grow: 1;
+        column-gap: 1rem;
+
+        border: blue dashed 2px;
+        background-image: url("https://akns-images.eonline.com/eol_images/Entire_Site/2018821/rs_1024x759-180921151706-1024.joaquin-phoenix-joker.ct.092118.jpg?fit=around%7C1024:759&output-quality=90&crop=1024:759;center,top");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 1rem auto;
+      }
+      .film:nth-child(1) {
+        position: relative;
+        top: 0.5rem;
+      }
+      .film:hover {
+        transform: scale(1.1);
+      }
+      .nume {
+        background-color: white;
+        margin-bottom: 1rem;
+      }
+      #rosu {
+        aspect-ratio: 1/1;
+        width: 1rem;
+        background-color: red;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="film">
+        <div id="rosu"></div>
+        <div class="nume"></div>
+      </div>
+      <div class="film">
+        <div class="nume"></div>
+      </div>
+      <div class="film">
+        <div class="nume"></div>
+      </div>
+      <div class="film">
+        <div class="nume"></div>
+      </div>
+    </div>
+
+    <script>
+      var lista_imagini = [
+        "https://akns-images.eonline.com/eol_images/Entire_Site/2018821/rs_1024x759-180921151706-1024.joaquin-phoenix-joker.ct.092118.jpg?fit=around%7C1024:759&output-quality=90&crop=1024:759;center,top",
+
+        "https://m.media-amazon.com/images/M/MV5BNzU5NzM4OTQxNV5BMl5BanBnXkFtZTgwOTQ5NjU0NzE@._V1_QL75_UX500_CR0,47,500,281_.jpg",
+
+        "https://faroutmagazine.co.uk/static/uploads/1/2021/01/Heath-Ledger-Joker.jpg",
+
+        "https://media.architecturaldigest.com/photos/568ee5140c81a2ea0f95c209/16:9/w_2560%2Cc_limit/the-revenant-set-design-001.jpg",
+      ];
+      var lista_nume = ["Joker", "Django", "Joker", "Leonardo"];
+
+      var divuri_nume = document.getElementsByClassName("nume");
+      for (let i = 0; i < lista_nume.length; i++) {
+        divuri_nume[i].innerHTML = lista_nume[i];
+      }
+
+      var divuri_filme = document.getElementsByClassName("film");
+      for (let i = 0; i < divuri_filme.length; i++) {
+        divuri_filme[i].style.backgroundImage =
+          ' url("  ' + lista_imagini[i] + ' ") ';
+      }
+    </script>
+  </body>
+</html>
