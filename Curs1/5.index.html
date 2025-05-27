@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+        width: 100vw;
+      }
+      #romania,
+      #germania {
+        display: flex;
+        width: 30vw;
+        aspect-ratio: 2/1;
+        background-color: aqua;
+      }
+      #romania div {
+        width: 33.33%;
+      }
+  
+      #germania {
+        flex-direction: column;
+      }
+      #germania div {
+        height: 33.33%;
+      }
+      /* #germania div:nth-child(1){
+        background-color: black;
+      }
+      #germania div:nth-child(2){
+        background-color: red;
+      }
+      #germania div:nth-child(3){
+        background-color: yellow;
+      } */
+
+    </style>
+  </head>
+  <body>
+    <div id="romania">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div id="germania">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <script>
+      var romania = ["blue", "yellow", "red"]
+      var germania = ["black", "red", "yellow"]
+
+      var ro_div = document.getElementById("romania")
+      var divs_romania = ro_div.getElementsByTagName("div")
+
+      for (let i = 0; i < divs_romania.length; i++) {
+       divs_romania[i].style.backgroundColor = romania[i];
+        
+      }
+
+      var de_div = document.getElementById("germania")
+      var divs_germania = de_div.getElementsByTagName("div")
+
+      for (let i = 0; i < divs_germania.length; i++) {
+        divs_germania[i].style.backgroundColor = germania[i];
+        
+      }
+      
+
+    </script>
+
+  </body>
+</html>

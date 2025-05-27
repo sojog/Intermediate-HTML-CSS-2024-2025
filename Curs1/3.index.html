@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+
+        width: min(50vw, 50vh);
+        background-color: gainsboro;
+        border-style: solid;
+      }
+      div > div {
+        width: min(45vw, 45vh);
+        background-color: fuchsia;
+        border-color: red;
+      }
+      div > div > div {
+        width: min(40vw, 40vh);
+        border-radius: 50%;
+        background-color: azure;
+        border-color: blue;
+      }
+      div > div > div > div {
+        width: min(25vw, 25vh);
+        border-radius: 0%;
+        background-color: greenyellow;
+        border-color: green;
+      }
+      div > div > div > div > div {
+        width: min(15vw, 15vh);
+        border-radius: 50%;
+        background-color: yellow;
+        border-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

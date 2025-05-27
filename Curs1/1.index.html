@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            height: 100vh;
+        }
+      #parinte {
+        background-color: aqua;
+        height: min(50vh, 50vw);
+        aspect-ratio: 1/1;
+
+
+        display:flex;
+        /* justify-content: center; */
+        justify-content: flex-end;
+
+        align-items: center; /* Verticala  - daca directia este row*/
+        flex-direction: row;
+
+      }
+      .copil {
+        background-color: chocolate;
+        height: min(10vh, 10vw);
+        aspect-ratio: 1/1;
+        margin:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parinte">
+        <div class="copil"></div>
+        <div class="copil"></div>
+    </div>
+  </body>
+</html>

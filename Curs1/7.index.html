@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+        width: 100vw;
+      }
+      #romania,
+      #germania {
+        display: flex;
+        width: 30vw;
+        aspect-ratio: 2/1;
+        background-color: aqua;
+      }
+      #romania div {
+        width: 33.33%;
+      }
+
+      #germania {
+        flex-direction: column;
+      }
+      #germania div {
+        height: 33.33%;
+      }
+    </style>
+  </head>
+  <body>
+    <select name="" id="vertical" onchange="schimba_steag_vertical()">
+      <option value="ro">Romania</option>
+      <option value="fr">Franta</option>
+      <option value="it">Italia</option>
+    </select>
+
+    <div id="romania">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div id="germania">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <select name="" id="vertical" onchange=" ">
+      <option value="ge">Germania</option>
+      <option value="ar">Argentina</option>
+      <option value="bg">Bulgaria</option>
+    </select>
+
+    <script>
+      var tara_selectata = "ro";
+
+      var romania = ["blue", "yellow", "red"];
+      var franta = ["blue", "white", "red"];
+      var italia = ["green", "white", "red"];
+
+      var tari_verticale = {
+        ro: romania,
+        fr: franta,
+        it: italia,
+      };
+
+      var germania = ["black", "red", "yellow"];
+
+      var de_div = document.getElementById("germania");
+      var divs_germania = de_div.getElementsByTagName("div");
+
+      for (let i = 0; i < divs_germania.length; i++) {
+        divs_germania[i].style.backgroundColor = germania[i];
+      }
+      function schimba_steag_vertical() {
+        var select_vertical = document.getElementById("vertical");
+        console.log(select_vertical.value);
+        tara_selectata = select_vertical.value;
+
+        var ro_div = document.getElementById("romania");
+        var divs_romania = ro_div.getElementsByTagName("div");
+
+        for (let i = 0; i < divs_romania.length; i++) {
+          divs_romania[i].style.backgroundColor =
+            tari_verticale[tara_selectata][i];
+        }
+      }
+      schimba_steag_vertical();
+    </script>
+  </body>
+</html>
