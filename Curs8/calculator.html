@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            background-color: black;
+            row-gap: 10px;
+            column-gap: 10px;
+            height: 500px;
+            aspect-ratio: 1/2;
+        }
+        .button {
+            /* aspect-ratio: 1/1; */
+            height: 60px;
+            background-color: gray;
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .button.result {
+            grid-column-start: 0;
+            grid-column-end: span 4; 
+            background-color: antiquewhite;
+            color:black;
+            justify-content: flex-end;
+            padding-right: 12.5%;
+        }
+        .button.operation{
+            background-color: orange;
+        }
+        .button.zero{
+            grid-column-end: span 2; 
+        }
+        .button.advancedoperation{
+            background-color: lightgray;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="button result">0</div>
+    <div class="button advancedoperation">AC</div>
+    <div class="button advancedoperation">+/-</div>
+    <div class="button advancedoperation">%</div>
+    <div class="button operation">/</div>
+    <div class="button">7</div>
+    <div class="button">8</div>
+    <div class="button">9</div>
+    <div class="button operation">X</div>
+    <div class="button">4</div>
+    <div class="button">5</div>
+    <div class="button">6</div>
+    <div class="button operation">-</div>
+    <div class="button">1</div>
+    <div class="button">2</div>
+    <div class="button">3</div>
+    <div class="button operation">+</div>
+    <div class="button zero">0</div>
+    <div class="button">,</div>
+    <div class="button operation">=</div>
+</div>
+    
+</body>
+</html>
