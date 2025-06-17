@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+            min-height: 100vh;
+        }
+        .pahar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 10rem;
+            aspect-ratio: 1/2.2;
+            background-color: white;
+            border: 3px solid blue;
+            border-bottom-right-radius: 3rem;
+            border-bottom-left-radius: 3rem;
+        }
+        .pahar > div {
+            color: blue;
+        }
+        #litri {
+            font-weight: 800;
+            font-size: 2rem;
+        }
+
+        #total {
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+        }
+        #total > .pahar {
+            width: 3rem;
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="total">
+        <div class="pahar">250 ml</div>
+        <div class="pahar">250 ml</div>
+        <div class="pahar">250 ml</div>
+        <div class="pahar">250 ml</div>
+        <div class="pahar">250 ml</div>
+        <div class="pahar">250 ml</div>
+        <div class="pahar">250 ml</div>
+        <div class="pahar">250 ml</div>
+    </div>
+
+
+
+    
+</body>
+</html>
