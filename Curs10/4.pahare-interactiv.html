@@ -28,7 +28,7 @@
         .pahar > div {
             color: blue;
         }
-        #litri {
+        #litri, .partea.plina {
             font-weight: 800;
             font-size: 2rem;
         }
@@ -44,6 +44,32 @@
             border-bottom-left-radius: 1rem;
         }
 
+        .pahar.mare {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8, 1fr);
+            overflow: hidden;
+        }
+        .partea {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .partea.goala {
+            grid-row: 1 / 4;
+           
+        }
+        .partea.plina {
+            background-color: aqua;
+            grid-row: 4 / 9;
+            height: 100%;
+            width: 100%;
+            
+           
+        }
+
 
 
     </style>
@@ -51,22 +77,95 @@
 <body>
 
     <div class="pahar mare">
-        <div id="litri">2L</div>
-        <div>Cantitate rămasă</div>
+        <div class="partea goala">
+            <div id="litri">2L</div>
+            <div>Cantitate rămasă</div>
+        </div>
+        <div class="partea plina">
+                50%
+        </div>
+
+
+   
     </div>
 
     <div id="total">
-        <div class="pahar">250 ml</div>
-        <div class="pahar">250 ml</div>
-        <div class="pahar">250 ml</div>
-        <div class="pahar">250 ml</div>
-        <div class="pahar">250 ml</div>
-        <div class="pahar">250 ml</div>
-        <div class="pahar">250 ml</div>
-        <div class="pahar">250 ml</div>
+        <div class="pahar" onclick="bea_apa(0)">250 ml</div>
+        <div class="pahar" onclick="bea_apa(1)">250 ml</div>
+        <div class="pahar" onclick="bea_apa(2)">250 ml</div>
+        <div class="pahar" onclick="bea_apa(3)">250 ml</div>
+        <div class="pahar" onclick="bea_apa(4)">250 ml</div>
+        <div class="pahar" onclick="bea_apa(5)">250 ml</div>
+        <div class="pahar" onclick="bea_apa(6)">250 ml</div>
+        <div class="pahar" onclick="bea_apa(7)">250 ml</div>
     </div>
 
+    <script>
 
+        var index_curent = -1
+        var pahare = document.querySelectorAll("#total > .pahar")
+
+        var partea_goala = document.querySelector(".partea.goala") 
+        var partea_plina = document.querySelector(".partea.plina") 
+         
+        function seteaza_parti(index) {
+            partea_goala.style.gridRowStart = 1 
+            partea_goala.style.gridRowEnd = 9 - index; 
+
+
+            partea_plina.style.gridRowStart =   9 - index;
+            partea_plina.style.gridRowEnd =  9; 
+
+            if (index < 1 ) {
+                partea_plina.style.display = "none";
+            } else {
+                 partea_plina.style.display = "block";
+            } 
+            if (index >= 8 ) {
+                partea_goala.style.display = "none";
+            } else {
+                 partea_goala.style.display = "block";
+            } 
+            
+        }
+
+        function bea_apa(index) {
+
+            if (index > index_curent) {
+                    for (let i = 0; i < pahare.length; i++) {
+                        if (i <= index) {
+                                const element = pahare[i];
+                                element.style.backgroundColor = "aqua";
+                        }
+                      }
+                      index_curent = index;
+                      seteaza_parti(index)
+                      return;
+            } 
+            if (index == index_curent)  {
+                    pahare[index].style.backgroundColor = "white";
+                    index_curent--;
+                    seteaza_parti(index)
+                    return;
+            }
+            if (index < index_curent) {
+                    for (let i = index + 1; i < pahare.length; i++) {
+                        if (i <= index_curent) {
+                                const element = pahare[i];
+                                element.style.backgroundColor = "white";
+                        }
+                      }
+                      index_curent = index;
+                      seteaza_parti(index)
+                      return;
+            } 
+            
+        }
+        bea_apa(-1)
+       
+
+
+    </script>
 
     
 </body>
