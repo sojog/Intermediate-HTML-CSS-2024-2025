@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <main>
+         <h1 id="joke">I don't trust sushi, there's something fishy about it.</h1>
+        <input type="text" name="" id="term" placeholder="Cauta gluma">
+        <button onclick="get_joke() ">Cauta</button>
+    </main>
+
+    <script>
+           const URL = "https://icanhazdadjoke.com/search?term="
+           var joke_h1 = document.getElementById("joke")
+           var input_term = document.getElementById("term")
+           async function  get_joke() {
+            
+                    const response = await fetch(URL + input_term.value, {headers:  {"Accept": "application/json"}})
+                    const json = await response.json();
+                    
+                    
+                    console.log(json);
+
+                    const new_joke = json["results"][0]["joke"];
+                    console.log(new_joke);
+                    joke_h1.innerHTML = new_joke;
+        }
+    </script>
+</body>
+</html>
